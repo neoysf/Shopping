@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Qeydiyyat</h2>
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="İstifadəçi adı" required><br>
+  <input type="email" name="email" placeholder="Email" required><br>
+  <input type="password" name="password1" placeholder="Şifrə" required><br>
+  <input type="password" name="password2" placeholder="Şifrəni təkrar yazın" required><br>
+  <button type="submit">Qeydiyyatdan keç</button>
+</form>
+
+{% endblock %}

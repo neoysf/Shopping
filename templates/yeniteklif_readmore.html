@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60% Endirim - Yeni Təkliflər</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff9f1a; /* Narıncı */
+        }
+        .offer-list {
+            list-style: none;
+            padding: 0;
+        }
+        .offer-list li {
+            background: #fff3cd; /* Açıq sarı */
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff9f1a; /* Narıncı */
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #ffcc00; /* Sarı */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yeni və Xüsusi Təkliflər</h1>
+        <ul class="offer-list">
+            <li>Qadın geyimlərinə 60% endirim</li>
+            <li>Kişi geyimlərinə 30% endirim</li>
+            <li>Ayaqqabılara 60% endirim</li>
+            <li>Elektronikaya 30% endirim</li>
+        </ul>
+        <a href="{% url 'core:home' %}" class="back-btn">Geri Qayıt</a>
+    </div>
+</body>
+</html>
+
+{% endblock %}

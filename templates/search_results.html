@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mt-4">
+        <h4>"{{ query }}" üçün nəticələr</h4>
+        {% if results %}
+            <div class="row">
+                {% for product in results %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.price }} AZN</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>Heç bir nəticə tapılmadı.</p>
+        {% endif %}
+    </div>
+{% endblock %}
